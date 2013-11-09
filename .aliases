@@ -10,7 +10,7 @@ alias -- -="cd -"
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/Projects"
+alias p="cd ~/src"
 alias g="git"
 alias gs="git status"
 alias gp="git pull"
@@ -23,6 +23,14 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 alias be="bundle exec"
+
+# Telmate folders
+alias snap="cd ~/src/telmate/apps/snap"
+alias its="cd ~/src/telmate/apps/tygerweb"
+
+# Hubflow
+alias ghpush="git hf push"
+alias gh="git hf"
 
 # Emulate "normal" Unixy behavior is OS X
 alias locate="mdfind -name"
