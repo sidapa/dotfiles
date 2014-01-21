@@ -27,6 +27,7 @@ alias be="bundle exec"
 # Telmate folders
 alias snap="cd ~/src/telmate/apps/snap"
 alias its="cd ~/src/telmate/apps/tygerweb"
+alias chef="cd ~/src/telmate/chef"
 
 # Hubflow
 alias ghpush="git hf push"
