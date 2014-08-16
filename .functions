@@ -1,3 +1,36 @@
 known_cut() {
   sed -ie ${1}d ~/.ssh/known_hosts
 }
+
+# git branch cleaner
+# clean_branches regex_matching_branch_names [test]
+clean_branches(){
+  if [[ $# -ne 2 ]];then
+    git branch  | cut -c3- | egrep $1 | xargs git branch -d
+  else
+    git branch  | cut -c3- | egrep $1
+  fi
+}
+
+merged_branches(){
+  local current_branch=$(git rev-parse --abbrev-ref HEAD)
+  for branch in $(git branch --merged | cut -c3-)
+    do
+      echo "Branch $branch is already merged into $current_branch."
+      echo "Would you like to delete it? [Y]es/[N]o "
+      read REPLY
+      if [[ $REPLY =~ ^[Yy] ]]; then
+        git branch -d $branch
+      fi
+  done
+}
+
+clean_remote_branches(){
+  if [[ $# -ne 2 ]];then
+    matching_branches=$(git branch -r | cut -c3- | egrep $1)
+    read remote branch <<<$(IFS="/"; echo $matching_branches)
+    git push $remote ":$branch"
+  else
+    git branch -r | cut -c3- | egrep $1
+  fi
+}
