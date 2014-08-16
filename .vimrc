@@ -23,7 +23,7 @@ set noeol
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
-	set undodir=~/.vim/undo
+  set undodir=~/.vim/undo
 endif
 
 " Respect modeline in files
@@ -36,6 +36,7 @@ set secure
 set number
 " Enable syntax highlighting
 syntax on
+
 " Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
@@ -111,4 +112,5 @@ if has("autocmd")
 endif
 
 execute pathogen#infect()
-colors github
+set background=light
+colors solarized
