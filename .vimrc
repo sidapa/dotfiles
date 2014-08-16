@@ -40,8 +40,17 @@ syntax on
 set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+
+if has ("autocmd")
+  filetype indent on
+endif
+
 " Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+" set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set lcs=tab:▸\ ,trail:·
 set list
 " Highlight searches
 set hlsearch
@@ -87,6 +96,12 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
+" Save a file (,s)
+noremap <leader>s :w<CR>
+
+" Save a file as root (,W)
+noremap <leader>r :RuboCop<CR>
+
 " Automatic commands
 if has("autocmd")
 	" Enable file type detection
@@ -94,3 +109,6 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
+
+execute pathogen#infect()
+colors github
