@@ -4,14 +4,12 @@
 [mergetool]
 	keepBackup = true
 [diff]
-	tool = diffmerge
+  tool = /usr/bin/opendiff
 [difftool "diffmerge"]
 	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 [merge]
-	tool = diffmerge
-[mergetool "diffmerge"]
-	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
-	trustExitCode = true
+  tool = /usr/bin/opendiff
+[mergetool "vi"]
 [color]
     ui = auto
 [alias]
