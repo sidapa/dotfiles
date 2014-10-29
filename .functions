@@ -34,3 +34,5 @@ clean_remote_branches(){
     git branch -r | cut -c3- | egrep $1
   fi
 }
+
+gr() { grep -ROs $1 . }

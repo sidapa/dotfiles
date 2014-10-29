@@ -24,7 +24,8 @@ alias o="open"
 alias oo="open ."
 alias be="bundle exec"
 alias tat="tmux attach -t"
-alias gr="grep -R"
+# gr is known found at ./functions
+# alias gr="grep -R . "
 
 # Telmate folders
 alias snap="cd ~/src/telmate/apps/snap"
