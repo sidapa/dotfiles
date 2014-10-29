@@ -26,6 +26,9 @@ alias be="bundle exec"
 alias tat="tmux attach -t"
 # gr is known found at ./functions
 # alias gr="grep -R . "
+alias rs="clear && rspec"
+alias rc="rubocop"
+alias ct="/usr/local/Cellar/ctags/5.8/bin/ctags -R ."
 
 # Telmate folders
 alias snap="cd ~/src/telmate/apps/snap"
