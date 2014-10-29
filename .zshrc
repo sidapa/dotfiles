@@ -13,7 +13,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spoonman"
 # ZSH_THEME="jalessio"
 
 # Example aliases
@@ -41,7 +41,6 @@ DISABLE_AUTO_TITLE="true"
 # plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source /opt/boxen/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/tmuxinator-0.6.8/completion/tmuxinator.zsh
 
 # Turn off zsh's annoying autocorrect
 unsetopt correct_all
@@ -51,12 +50,14 @@ export PATH=~/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/usr/X11/bin
 export PATH="/Applications/Postgres93.app/Contents/MacOS/bin/:$PATH"
 export PATH="/usr/local/bin/:$PATH"
 export DYLD_FALLBACK_LIBRARY_PATH="/usr/lib/:$BOXEN_HOME/homebrew/lib:$DYLD_FALLBACK_LIBRARY_PATH"
+export BOXEN_SOCKET_DIR="/usr/local/data/project-sockets"
 #export EDITOR="/usr/local/bin/atom"
 export EDITOR="vim"
 
 # FLEX 4.1 for SNAP/TPHONE-FLEX
-export PATH=$PATH:/opt/boxen/homebrew/Cellar/flex_sdk-4.1/sdk/libexec/bin
-export FLEX_HOME=/opt/boxen/homebrew/Cellar/flex_sdk-4.1/sdk/libexec
+export PATH=$PATH:/usr/local/Cellar/flex_sdk-4.1/sdk/libexec/bin
+export PATH=$PATH:/usr/local/Cellar/flex_sdk-4.1/sdk/libexec
+export FLEX_HOME=/usr/local/Cellar/flex_sdk-4.1/sdk/libexec
 mkdir -p ~/.ant/lib
 if [ ! -e ~/.ant/lib/flexTasks.jar ]; then
   ln -sf /opt/boxen/homebrew/Cellar/flex_sdk-4.1/sdk/libexec/ant/lib/flexTasks.jar ~/.ant/lib
