@@ -82,5 +82,6 @@ fi
 # From http://steveswinsburg.wordpress.com/2011/07/22/java_home-on-os-x-lion/
 # export JAVA_HOME=$(/usr/libexec/java_home)
 
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+export JRUBY_OPTS=--debug
 
+source ~/.profile
