@@ -29,9 +29,11 @@ alias o="open"
 alias oo="open ."
 alias be="bundle exec"
 alias tat="tmux attach -t"
+alias gt="gittower"
 # gr is known found at ./functions
 # alias gr="grep -R . "
 alias rs="clear && rspec"
+alias zrs="clear && zeus rspec"
 alias jrs="clear && jruby --dev -G bin/rspec"
 alias kc="clear && kitchen converge -l debug"
 alias rc="rubocop"
@@ -39,12 +41,14 @@ alias ct="/usr/local/Cellar/ctags/5.8/bin/ctags -R ."
 
 # Telmate folders
 alias snap="cd ~/src/telmate/apps/snap"
+alias spinalcap="cd ~/src/telmate/chef/spinal-cap"
 alias its="cd ~/src/telmate/apps/tygerweb"
 alias gochef="cd ~/src/telmate/chef"
 alias services="cd ~/src/telmate/services"
 alias apps="cd ~/src/telmate/apps"
 alias telmate="cd ~/src/telmate"
 alias visits="cd ~/src/telmate/apps/video_visits"
+alias af="cd ~/src/telmate/services/appointment_foundry"
 
 # Hubflow
 alias ghpush="git hf push"

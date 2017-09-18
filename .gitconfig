@@ -1,6 +1,6 @@
 [user]
 	name = Adrian Joseph Tumusok
-	email = me@adriantumusok.com
+	email = adrian@egissys.com
 [mergetool]
 	keepBackup = true
 [diff]
@@ -8,7 +8,7 @@
 [difftool "diffmerge"]
 	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 [merge]
-  tool = /usr/bin/opendiff
+	tool = opendiff
 [mergetool "vi"]
 [color]
     ui = auto
@@ -39,10 +39,27 @@
     dh1 = diff HEAD~1
 [core]
 	quotepath = false
- excludesfile = /opt/boxen/config/git/gitignore
+	excludesfile = /Users/adrian/.gitignore_global
 [push]
 	default = current
 
 
 [credential]
 helper = /opt/boxen/bin/boxen-git-credential
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
