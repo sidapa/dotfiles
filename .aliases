@@ -7,7 +7,10 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # I lost my vi!!
-alias vi="vim"
+alias vi="/usr/local/bin/vim"
+alias vim="/usr/local/bin/vim"
+alias v="/usr/local/bin/vim"
+alias nv="nvim"
 
 # Shortcuts
 alias d="cd ~/Documents/Dropbox"
@@ -22,7 +25,6 @@ alias gl="git log"
 alias gsh="git show"
 alias h="history"
 alias j="jobs"
-alias v="vim"
 alias m="mate ."
 alias s="subl ."
 alias o="open"

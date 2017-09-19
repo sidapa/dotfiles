@@ -29,7 +29,9 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'tpope/vim-surround'
+Plugin 'mileszs/ack.vim'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'wincent/command-t'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -219,8 +221,14 @@ function RspecCurrent()
 endfunction
 noremap <leader>c :call RspecCurrent()<CR>
 
+let g:ackprg = 'ag --vimgrep --smart-case'
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
+
 
 execute pathogen#infect()
 set background=light
-call togglebg#map("")
+" call togglebg#map("")
 colors solarized
