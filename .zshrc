@@ -91,6 +91,7 @@ ulimit -n 10000
 export LC_CTYPE="en_US.UTF-8"
 
 source ~/.profile
+source ~/.env
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
