@@ -187,7 +187,8 @@ noremap <leader>gs :Gstatus<CR>
 noremap <leader>gb :Gblame<CR>
 
 " ToggleBG
-noremap <leader>bg :ToggleBG<CR>
+" noremap <leader>bg :ToggleBG<CR>
+noremap <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
 " Automatic commands
 if has("autocmd")
@@ -227,8 +228,10 @@ cnoreabbrev aG Ack
 cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
 
+set modelines=0
+set nomodeline
 
 execute pathogen#infect()
 set background=light
 " call togglebg#map("")
-colors solarized
+colorscheme solarized

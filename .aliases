@@ -40,10 +40,11 @@ alias jrs="clear && jruby --dev -G bin/rspec"
 alias kc="clear && kitchen converge -l debug"
 alias rc="rubocop"
 alias ct="/usr/local/Cellar/ctags/5.8/bin/ctags -R ."
+alias dco="docker-compose"
 
 # Telmate folders
 alias snap="cd ~/src/telmate/apps/snap"
-alias spinalcap="cd ~/src/telmate/chef/spinal-cap"
+alias spinalcap="cd ~/src/telmate/chef/spinal-cap && git pull"
 alias its="cd ~/src/telmate/apps/tygerweb"
 alias gochef="cd ~/src/telmate/chef"
 alias services="cd ~/src/telmate/services"
